@@ -1,0 +1,112 @@
+{% comment %} <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        
+            <div id="top-bar"><div id="main-text">E-Partogram</div><img id="tool" src="http://127.0.0.1:8000/static/1.png"></div>
+            <div  id="side-box">
+               <br>
+               <label> Sign up</label><br><br>
+               <div id="inside-sidebox">
+            <form action="" method="post">
+                {% csrf_token %}
+           Enter Email :  <input type="email" id="email", name="email"><br><br>
+           Enter Phone :  <input type="text" id="phone" name="phone"><br><br>
+           Enter Password :  <input  id="password" name="password"><br><br>
+           Enter Role :  <input type="text" name="role"><br><br>
+           <button id="link" type="submit" > Signup</button>
+           <a href="http://127.0.0.1:8000/login/"> Go to login page</a>
+           {% for message in messages %}
+           <h1>{{ message }}</h1>
+           {% endfor %}
+            </form></div></div>
+        </body>
+        </html
+         {% endcomment %}
+        {% comment %} register page styled {% endcomment %}
+
+        {% load static %}
+<!DOCTYPE html>
+    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title></title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="{% static 'registerStyle.css' %}">
+        </head>
+        <body>
+          <div id="partition">
+            <!-- left -->
+            <div id="left">
+                
+                    <div id="header">Signup</div>
+                    <div id="detailsList">
+
+
+
+
+
+
+                        {% comment %} <form action="" method="post">
+                            {% csrf_token %}
+                       Enter Email :  <input type="email" id="email", name="email"><br><br>
+                       Enter Phone :  <input type="text" id="phone" name="phone"><br><br>
+                       Enter Password :  <input  id="password" name="password"><br><br>
+                       Enter Role :  <input type="text" name="role"><br><br>
+                       <button id="link" type="submit" > Signup</button>
+                       <a href="http://127.0.0.1:8000/login/"> Go to login page</a>
+                       {% for message in messages %}
+                       <h1>{{ message }}</h1>
+                       {% endfor %}
+                        </form> {% endcomment %}
+
+
+
+
+
+                        <form action="" method="post">
+                            {% csrf_token %}
+                        {% comment %} <Input type="text" placeholder="Enter name"></Input> {% endcomment %}
+                        <Input type="email" id="email", name="email" placeholder="Enter email">
+                        <Input type="text" id="phone" name="phone" placeholder="Enter phone">
+                        <Input type="text" name="role" placeholder="Enter role">
+                        <Input type="text"  id="password" name="password" placeholder="Enter password">
+                        {% comment %} <Input type="text" placeholder="Enter repeat password"></Input> {% endcomment %}
+                        <button id="button" type="submit" > Signup</button>
+                        
+                        {% for message in messages %}
+                        <h1>{{ message }}</h1>
+                        {% endfor %}
+                         </form>
+                   
+                    </div>
+                    
+                    <div><a id="already" href="http://127.0.0.1:8000/login/">I am already a member, login</a></div>
+                    <div><a id="already" href="http://127.0.0.1:8000/">Back</a></div>
+            </div>
+            <!-- right -->
+            {% comment %} <div id="right">
+                <img src="{% static 'images/register.jpg' %}"/>
+                <!-- <div><a id="already" href="">I am already a member</a></div> -->
+            </div> {% endcomment %}
+        </div>
+            <script src="" async defer></script>
+        </body>
+    </html>

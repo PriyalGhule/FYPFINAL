@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   <title>Home</title>
+    <link rel="stylesheet" href="{% static 'landing.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap"/>
+   <link rel="stylesheet" href='https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Protest+Revolution&display=swap'/> 
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+      
+      
+      
+  </head>
+    <body>
+     
+    <nav>
+      <div class="logo">ScriptSketch</div>
+      <input type="checkbox" id="click">
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="http://127.0.0.1:8000/about/">About</a></li>
+        <li><a href="http://127.0.0.1:8000/editor/">Editor</a></li>
+        <li><a href="http://127.0.0.1:8000/explore/">Explore</a></li>
+        <li><a href="http://127.0.0.1:8000/login/">Login</a></li>
+      </ul>
+    </nav>
+  
+    <body>
+      <div id="main-container">
+      <div id="main-text">Art Generation using AI</div>
+    <div id="para">Create awe-inspiring masterpieces effortlessly and explore the endless possibilities of AI generated art. Enter a prompt, choose a style, and watch Imagine - AI art generator bring your ideas to life!</div>
+    <div id="input-container"><input type="text"><button><a id="generate" href="http://127.0.0.1:8000/signup/">Generate</a></button></div>
+    <div id="imageList">
+      <img id="imageItem" src="{% static 'images/plant1.jpg' %}"/>
+      <img id="imageItem" src="{% static 'images/plant2.jpg' %}"/>
+      <img id="imageItem" src="{% static 'images/plant3.jpg' %}"/>
+      <img id="imageItem" src="{% static 'images/plant4.jpg' %}"/>
+    </div>
+    <div id="imageList">
+      <img id="imageItem" src="{% static 'images/animal1.jpg' %}"/>
+      <img id="imageItem" src="{% static 'images/animal2.jpg' %}"/>
+      <img id="imageItem" src="{% static 'images/animal3.jpg' %}"/>
+      <img id="imageItem" src="{% static 'images/animal4.jpg' %}"/>
+      
+    </div>
+    <div id="imageList">
+      <img id="imageItem" id="img1" src="{% static 'images/ocean1.jpg' %}"/>
+      <img id="imageItem" src="{% static 'images/ocean2.jpg' %}"/>
+      <img id="imageItem" src="{% static 'images/ocean3.jpg' %}"/>
+      <img id="imageItem" src="{% static 'images/ocean4.jpg' %}"/>
+      
+    </div>
+
+    <div id="headerTextContainer">
+      <div id="headerText">Imagine</div>
+      <div id="headerText">Type</div> 
+      <div id="headerText">Generate</div> 
+    </div>
+    <!-- footer starts -->
+   
+    <section class="footer">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul class="links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Compressions</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Collection</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul class="links">
+            <li><a href="#">Free Designs</a></li>
+            <li><a href="#">Latest Designs</a></li>
+            <li><a href="#">Themes</a></li>
+            <li><a href="#">Popular Designs</a></li>
+            <li><a href="#">Art Skills</a></li>
+            <li><a href="#">New Uploads</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul class="links">
+            <li><a href="#">Customer Agreement</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">GDPR</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Media Kit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>
+            Subscribe to our newsletter for a weekly dose
+            of news, updates, helpful tips, and
+            exclusive offers.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Your email" required>
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+          <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- footer ends -->
+  </div>
+    </body>

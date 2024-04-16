@@ -1,0 +1,125 @@
+*{
+    margin:0px;
+    font-family:Gill Sans, Gill Sans MT, Calibri, sans-serif;
+   font-weight: 200;
+   
+   
+   }
+body{
+    background-color: rgb(2,0,36);
+background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 32%, rgba(26,39,42,1) 79%);
+display: flex;
+justify-content: center;
+}
+
+#partition{
+    margin:5%;
+    
+    position: absolute;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    /* height: 90%; */
+    
+    justify-content: center;
+   border: 1px solid #ffffff;
+   border-radius: 5%;
+   /* background-color: #372665; */
+}
+#left{
+    margin:12%;
+   
+    flex:1;
+    display: flex;
+    
+    gap: 8%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+}
+#right{
+    flex:1;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    gap:3%;
+    align-items: center;
+}
+
+#header{
+/* background-color: aqua; */
+color: #ffffff;
+font-size: 40px;
+font-weight: 400;
+
+}
+
+#detailsList{
+  
+}
+
+input{
+    width: 100%;
+    background: transparent;
+  border: none;
+  padding: 5px 20px;
+  margin: 2% 0;
+  font-size: 100%;
+  outline: none;
+  
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgb(205, 205, 205);
+  color: #ffffff;
+}
+#button {
+    background-color: #ffffff; /* Green */
+    margin-top:0.8em;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    border-radius: 1em;
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 96%;
+    
+  }
+
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    border-bottom-right-radius: 9%;
+    border-top-right-radius: 9%;
+    float: right;
+    
+  }
+  #already{
+      text-decoration: none;
+      color: #d2d2d2;
+      
+  }
+
+  @media only screen and (max-width: 768px){
+     img{
+         display: none;
+     }  
+
+     #partition{
+         flex-direction: column;
+         align-items: center;
+     }
+     #right{display: none;}
+
+     #left{
+         align-items: center;
+     }
+     /* input{
+         text-align: center;
+     } */
+  }

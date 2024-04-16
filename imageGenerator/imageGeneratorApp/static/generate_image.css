@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(2,0,36);
+background-color: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 32%, rgba(26,39,42,1) 79%);
+color:#ffffff
+
+} 
+
+nav{
+  display: flex;
+  
+  height: 80px;
+  width: 100%;
+  /* background: #1b1b1b; */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  z-index: 99;
+}
+nav .logo{
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover{
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"]{
+  display: none;
+}
+@media (max-width: 1000px){
+  nav{
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i{
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before{
+    content: "\f00d";
+  }
+  nav ul{
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul{
+    left: 0;
+  }
+  nav ul li{
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a{
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 20px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a{
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover{
+    background: none;
+    color: cyan;
+  }
+}
+/* .content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  color: #1b1b1b;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+} */
+
+
+#mainBox{
+    z-index: -1;
+    margin:5%;
+    position:absolute;
+    width: 90%;
+    height: 80vh;
+    /* border-radius: 3%; */
+    display: flex;
+    border: 3px solid white;
+    
+    /* background-color: aqua; */
+   
+}
+input{
+  border:0;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ccc; 
+  padding:1%;
+  /* webkit-appearance: none; */
+  /* border-color: transparent; */
+}
+ 
+#left{
+    /* background-color: blue; */
+    flex:1;
+    
+    padding:5%;
+    display: flex;
+    flex-direction: column;
+    gap:2em;
+    border-right: 1px solid white;
+}
+#userprompt{
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    
+}
+#right{
+    /* background-color: yellow; */
+    padding:5%;
+    flex:1;
+}
+
+#button{
+    width:40%;
+    padding:0.3em;
+    background-color: #ffffff;
+    color: #111;
+   border-radius: 5%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px){
+    #mainBox{
+        flex-direction: column;
+    }
+}
